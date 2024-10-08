@@ -4,18 +4,22 @@ public class Cuenta {
 	
 	private Double saldo;
 	
-	public Cuenta () {
-		this.saldo = 0.0;
+	public Cuenta(Double i) {
+		this.saldo = i;
+	}
+	
+	public Double getSaldo() {
+		return saldo;
 	}
 
-	public void ingresar(int i) {
-		// TODO Auto-generated method stub
-		
+	public void setSaldo(Double saldo) {
+		this.saldo = saldo;
 	}
 
-	public Integer getSaldo() {
-		// TODO Auto-generated method stub
-		return 500;
+	public void ingresar(Double i) {
+		this.saldo += i;
 	}
+
+
 
 }
