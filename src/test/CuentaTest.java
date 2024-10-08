@@ -12,11 +12,10 @@ import sesion.Cuenta;
 
 class CuentaTest {
 	
-	private static Cuenta cuenta;
+	private Cuenta cuenta;
 
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
-		cuenta = new Cuenta(0d);
 	}
 
 	@AfterAll
@@ -25,6 +24,7 @@ class CuentaTest {
 
 	@BeforeEach
 	void setUp() throws Exception {
+		cuenta = new Cuenta(0d);
 	}
 
 	@AfterEach
@@ -41,6 +41,9 @@ class CuentaTest {
 	
 	@Test
 	void testRetirar() {
+		
+		cuenta.retirar(500d);
+		assertEquals(-500, cuenta.getSaldo());
 		
 	}
 
